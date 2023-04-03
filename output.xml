@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.5 on win32)" generated="20230403 13:48:00.198" rpa="false">
+<suite id="s1" name="Jrecommerce" source="C:\Users\kumaran\eclipse-workspace\robotproject\Jrecommerce">
+<suite id="s1-s1" name="CustomerLogin" source="C:\Users\kumaran\eclipse-workspace\robotproject\Jrecommerce\CustomerLogin.robot">
+<test id="s1-s1-t1" name="Launching the Url and check DashBaoard page is Opening">
+<kw name="Loading page" library="LandingPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:00.715" level="INFO">Opening browser 'Chrome' to base url 'https://www.jrecommerce.com/demo.php#demo'.</msg>
+<status status="PASS" starttime="20230403 13:48:00.714" endtime="20230403 13:48:04.470"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230403 13:48:04.470" endtime="20230403 13:48:04.653"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${pagetxt}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:04.754" level="INFO">Current page contains text 'eCommerce Demo'.</msg>
+<status status="PASS" starttime="20230403 13:48:04.654" endtime="20230403 13:48:04.755"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:00.713" endtime="20230403 13:48:04.755"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20230403 13:48:08.760" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230403 13:48:04.756" endtime="20230403 13:48:08.761"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:00.711" endtime="20230403 13:48:08.763" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Click customerLogin and verify page is loading">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${customerLoginbtn}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:08.781" level="INFO">Clicking link '//a[contains(.,'Customer Login')]'.</msg>
+<status status="PASS" starttime="20230403 13:48:08.777" endtime="20230403 13:48:09.186"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20230403 13:48:09.188" endtime="20230403 13:48:09.235"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${customerLoginPagetxt}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:12.717" level="INFO">Current page contains text 'New Customer'.</msg>
+<status status="PASS" starttime="20230403 13:48:09.235" endtime="20230403 13:48:12.717"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:08.768" endtime="20230403 13:48:12.718" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Click customerLoginBtn and Verify page is Loaded">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:12.722" level="INFO">Typing text 'demouser@demo.com' into text field '//input[@id='input-email']'.</msg>
+<status status="PASS" starttime="20230403 13:48:12.721" endtime="20230403 13:48:12.919"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:12.922" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<status status="PASS" starttime="20230403 13:48:12.921" endtime="20230403 13:48:13.119"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${loginsubmitclick}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:13.121" level="INFO">Clicking element '//input[@value='Login']'.</msg>
+<status status="PASS" starttime="20230403 13:48:13.120" endtime="20230403 13:48:14.311"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${customerdashboardTxt}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:14.348" level="INFO">Current page contains text 'My Account'.</msg>
+<status status="PASS" starttime="20230403 13:48:14.312" endtime="20230403 13:48:14.348"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:12.719" endtime="20230403 13:48:14.349" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="click edit account information">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${customeraccountclick}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:14.354" level="INFO">Clicking element '//span[normalize-space()='edit your account']'.</msg>
+<status status="PASS" starttime="20230403 13:48:14.352" endtime="20230403 13:48:15.437"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerUpdatePhno}</arg>
+<arg>${phoneNumber}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:15.442" level="INFO">Typing text '6383157827' into text field '//input[@id='input-telephone']'.</msg>
+<status status="PASS" starttime="20230403 13:48:15.440" endtime="20230403 13:48:15.657"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${updatesuccessbtn}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:15.659" level="INFO">Clicking element '//input[@value='Continue']'.</msg>
+<status status="PASS" starttime="20230403 13:48:15.658" endtime="20230403 13:48:16.788"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${customersuccesspageText}</arg>
+</arguments>
+<msg timestamp="20230403 13:48:16.828" level="INFO">Current page contains text 'Success: Your account has been successfully updated.'.</msg>
+<status status="PASS" starttime="20230403 13:48:16.790" endtime="20230403 13:48:16.829"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:14.351" endtime="20230403 13:48:16.829" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="click changepasswordbtn and verify page is loaded">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="content"]/div/div[1]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20230403 13:48:16.832" level="INFO">Clicking link '//*[@id="content"]/div/div[1]/div[2]/a'.</msg>
+<status status="PASS" starttime="20230403 13:48:16.832" endtime="20230403 13:48:17.566"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='input-password']</arg>
+<arg>robotFramework</arg>
+</arguments>
+<msg timestamp="20230403 13:48:17.568" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<status status="PASS" starttime="20230403 13:48:17.567" endtime="20230403 13:48:17.795"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='input-confirm']</arg>
+<arg>robotFramework</arg>
+</arguments>
+<msg timestamp="20230403 13:48:17.796" level="INFO">Typing password into text field '//input[@id='input-confirm']'.</msg>
+<status status="PASS" starttime="20230403 13:48:17.795" endtime="20230403 13:48:18.008"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@value='Continue']</arg>
+</arguments>
+<msg timestamp="20230403 13:48:18.011" level="INFO">Clicking element '//input[@value='Continue']'.</msg>
+<status status="PASS" starttime="20230403 13:48:18.010" endtime="20230403 13:48:19.184"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Success: Your password has been successfully updated.</arg>
+</arguments>
+<msg timestamp="20230403 13:48:19.229" level="INFO">Current page contains text 'Success: Your password has been successfully updated.'.</msg>
+<status status="PASS" starttime="20230403 13:48:19.184" endtime="20230403 13:48:19.229"></status>
+</kw>
+<status status="PASS" starttime="20230403 13:48:16.830" endtime="20230403 13:48:19.230" critical="yes"></status>
+</test>
+<doc>This file is to test the framework</doc>
+<status status="PASS" starttime="20230403 13:48:00.308" endtime="20230403 13:48:19.232"></status>
+</suite>
+<status status="PASS" starttime="20230403 13:48:00.257" endtime="20230403 13:48:19.248"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Jrecommerce">Jrecommerce</stat>
+<stat pass="5" fail="0" id="s1-s1" name="CustomerLogin">Jrecommerce.CustomerLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
